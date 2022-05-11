@@ -1,0 +1,64 @@
+﻿@model IEnumerable<PartnerTaskApp.Models.ViewModels.CalculationViewModel>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Calculation</h1>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.PartnerId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PartnerName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParentPartnerId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FeePercent)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TeamShopingAmount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TotalShopingAmount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PartnerBonus)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.PartnerId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PartnerName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ParentPartnerId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FeePercent)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TeamShopingAmount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TotalShopingAmount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PartnerBonus)
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
