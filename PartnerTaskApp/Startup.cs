@@ -24,12 +24,12 @@ namespace PartnerTaskApp
         {
             services.AddControllersWithViews();
             services.AddSingleton<IPartnerRepository, PartnerRepository>();
-            services.AddSingleton<IPartnerService, PartnerService>();
+            services.AddTransient<IPartnerService, PartnerService>();
 
             services.AddSingleton<IFinancialItemRepository, FinancialItemRepository>();
-            services.AddSingleton<IFinancialItemService, FinancialItemService>();
+            services.AddTransient<IFinancialItemService, FinancialItemService>();
 
-            services.AddSingleton<ICalculationService, CalculationService>();
+            services.AddTransient<ICalculationService, CalculationService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
